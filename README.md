@@ -1,6 +1,6 @@
 # fis3-parser-html-uri
 
-*html*文件增加类似js文件中的*__uri*资源自动定位功能函数
+扩展原来的<link rel=\"import\">,增加data传值
 
 ## 安装
 
@@ -19,7 +19,7 @@ fis.match('*.html', {
 ### demo.html
 
 ```html
-<link rel="import" href="./some-widget?__inline" data="{attr:'hello',attr2:'world'}">
+<link rel="import" href="./some-widget.html?__inline" data="{attr:'hello',attr2:'world'}">
 ```
 
 ### some-widget.html
