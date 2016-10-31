@@ -1,7 +1,7 @@
 {
   "name": "fis3-parser-html-import",
   "version": "1.0.0",
-  "description": "扩展原来的<link rel=\"import\">,增加data传值",
+  "description": "扩展原来的&lt;link rel=\"import\"&gt;,增加data传值",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
