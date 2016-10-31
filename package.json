@@ -14,7 +14,8 @@
     "fis",
     "fis3",
     "plugin",
-    "html"
+    "html",
+    "import"
   ],
   "author": "Fancy <fancyboynet@gmail.com>",
   "license": "MIT",
