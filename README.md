@@ -1,6 +1,6 @@
 # fis3-parser-html-uri
 
-扩展原来的&lt;link rel=\"import\"&gt;,增加data传值
+扩展原来的&lt;link rel="import"&gt;,增加data传值
 
 ## 安装
 
