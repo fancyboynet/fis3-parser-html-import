@@ -1,6 +1,6 @@
 {
   "name": "fis3-parser-html-import",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "扩展原来的&lt;link rel=\"import\"&gt;,增加data传值",
   "main": "index.js",
   "scripts": {

@@ -9,7 +9,10 @@ module.exports = function (content, file, opt) {
   var regInline = /href="(.+?)\?__inline"/i;
   var regData = /data="({.+?})"/i;
   var regByRoot = /^\//;
-  var regTpl = /{{\s*(\S+?)\s*?}}/ig;
+  var symbolStart = opt.symbolStart || '{{'
+  var symbolEnd = opt.symbolEnd || '}}'
+  var regTpl = new RegExp(symbolStart + '\\s*(\\S+?)\\s*?' + symbolEnd, 'ig');
+
   return content.replace(regLink, function(match) {
     var inline = match.match(regInline);
     if(!inline){
