@@ -19,10 +19,7 @@ module.exports = function (content, file, opt) {
       return match
     }
     let data = match.match(regData)
-    if (!data) {
-      return match
-    }
-    data = eval('(' + data[1] + ')')
+    data = data ? eval('(' + data[1] + ')') : {}
     let filePath
     if (regByRoot.test(inline[1])) { // 相对项目根目录
       filePath = path.resolve(fis.project.getProjectPath(), inline[1].slice(1))
@@ -32,7 +29,7 @@ module.exports = function (content, file, opt) {
     let embedFile = fis.file.wrap(filePath)
     let embedFileContent = embedFile.getContent()
     return embedFileContent.replace(regTpl, function (all, attr) {
-      return data[attr]
+      return data[attr] === undefined ? '' : data[attr]
     })
   })
 }
