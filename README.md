@@ -21,7 +21,10 @@ fis.match('page.html', {
 page.html
 
 ```html
-<link rel="import" href="./widget.html?__inline" data="{attr:'hello',attr2:'world'}">
+<link rel="import" href="./widget.html?__inline" data="{attr:'hello',attr2:'world'}"> // 全部字段
+<link rel="import" href="./widget.html?__inline" data="{attr:'hello'}"> // 部分字段
+<link rel="import" href="./widget.html?__inline" data="{a:'hello'}"> // 没有匹配的字段
+<link rel="import" href="./widget.html?__inline"> // 不传data
 ```
 
 widget.html
@@ -34,6 +37,9 @@ widget.html
 
 ```html
 <div>hello - world</div>
+<div>hello - </div>
+<div> - </div>
+<div> - </div>
 ```
 
 ### 自定义模板符号
